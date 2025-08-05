@@ -57,7 +57,7 @@ export function AboutPage() {
             viewport={{ once: true }}
             className="glass-card rounded-3xl p-8 mb-12"
           >
-            <h2 className="text-center text-slate-800 mb-8">The Artisan's Journey</h2>
+            <h2 className="text-center text-slate-800 mb-8">The Artisan&apos;s Journey</h2>
             
             {/* Video Player */}
             <div className="relative aspect-video bg-slate-900 rounded-2xl overflow-hidden mb-6">
@@ -89,16 +89,16 @@ export function AboutPage() {
               <h4 className="text-slate-800 mb-4">Documentary Transcript</h4>
               <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
                 <p>
-                  "In the heart of Istanbul, where the Bosphorus meets ancient tradition, 
-                  master weaver Ahmet Zeynep begins each day before dawn..."
+                  &ldquo;In the heart of Istanbul, where the Bosphorus meets ancient tradition, 
+                  master weaver Ahmet Zeynep begins each day before dawn...&rdquo;
                 </p>
                 <p>
-                  "Each knot is tied with intention. Each thread carries the weight of 
-                  generations of knowledge passed down through centuries..."
+                  &ldquo;Each knot is tied with intention. Each thread carries the weight of 
+                  generations of knowledge passed down through centuries...&rdquo;
                 </p>
                 <p>
-                  "We don't just create carpets. We weave dreams, memories, and stories 
-                  that will outlive us all."
+                  &ldquo;We don&apos;t just create carpets. We weave dreams, memories, and stories 
+                  that will outlive us all.&rdquo;
                 </p>
               </div>
             </motion.div>
@@ -130,8 +130,8 @@ export function AboutPage() {
             <div className="glass-card rounded-3xl p-8">
               <h2 className="text-slate-800 mb-6">Master Artisan</h2>
               <blockquote className="text-2xl text-slate-600 italic leading-relaxed mb-8">
-                "Each carpet is born from a conversation between the past and the future. 
-                I am merely the translator."
+                &ldquo;Each carpet is born from a conversation between the past and the future. 
+                I am merely the translator.&rdquo;
               </blockquote>
               <div className="space-y-4 text-slate-600">
                 <p>

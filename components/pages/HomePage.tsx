@@ -233,7 +233,7 @@ export function HomePage() {
                 </p>
                 <p>
                   Every carpet tells a story—of the hands that crafted it, the traditions 
-                  that inspired it, and the home it will grace. We don't just create carpets; 
+                  that inspired it, and the home it will grace. We don&apos;t just create carpets; 
                   we weave dreams into reality.
                 </p>
               </div>

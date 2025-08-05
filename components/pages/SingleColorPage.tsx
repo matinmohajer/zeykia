@@ -133,7 +133,7 @@ export function SingleColorPage({ colorId }: SingleColorPageProps) {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-white/90 text-lg leading-relaxed italic mb-8"
           >
-            "{color.story}"
+            &ldquo;{color.story}&rdquo;
           </motion.blockquote>
 
           {/* Color Code */}

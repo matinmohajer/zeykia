@@ -5,9 +5,18 @@ import { useState } from 'react';
 import { Calendar, Palette, Ruler, Package } from 'lucide-react';
 import { ImageWithFallback } from '../ImageWithFallback';
 
+interface Product {
+  id: string;
+  name: string;
+  conceptImage: string;
+  expectedDelivery: string;
+  startingPrice: number;
+  description: string;
+}
+
 export function ExclusiveProductsPage() {
   const [showCustomizer, setShowCustomizer] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const exclusiveProducts = [
     {
@@ -213,10 +222,9 @@ export function ExclusiveProductsPage() {
                         <div className="flex justify-between">
                           <span>{size.label}</span>
                           <span>
-                            {size.priceMultiplier === 'quote' 
-                              ? 'Quote' 
-                              : `$${(selectedProduct.startingPrice * size.priceMultiplier).toLocaleString()}`
-                            }
+                            {typeof size.priceMultiplier === 'number'
+                              ? `$${(selectedProduct.startingPrice * size.priceMultiplier).toLocaleString()}`
+                              : 'Quote'}
                           </span>
                         </div>
                       </motion.button>
