@@ -3,12 +3,13 @@ import { Footer } from '@/components/Footer';
 import { SingleStatementPage } from '@/components/pages/SingleStatementPage';
 
 interface StatementPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function StatementPage({ params }: StatementPageProps) {
+export default async function StatementPage(props: StatementPageProps) {
+  const params = await props.params;
   return (
     <>
       <Navigation />

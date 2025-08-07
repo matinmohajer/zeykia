@@ -3,12 +3,13 @@ import { Footer } from '@/components/Footer';
 import { SingleColorPage } from '@/components/pages/SingleColorPage';
 
 interface ColorPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ColorPage({ params }: ColorPageProps) {
+export default async function ColorPage(props: ColorPageProps) {
+  const params = await props.params;
   return (
     <>
       <Navigation />

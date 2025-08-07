@@ -3,12 +3,13 @@ import { Footer } from '@/components/Footer';
 import { SingleProductPage } from '@/components/pages/SingleProductPage';
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage(props: ProductPageProps) {
+  const params = await props.params;
   return (
     <>
       <Navigation />
