@@ -21,15 +21,21 @@ export function HeroSection({
       className={`relative h-screen flex items-center justify-center overflow-hidden ${className}`}
     >
       {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src={backgroundImage}
-          alt="Hero background"
-          className="w-full h-full object-cover"
-          style={{ objectFit: "cover", width: "100%", height: "100%" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
-      </div>
+      <div className="absolute inset-0 pointer-events-none">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            crossOrigin="anonymous"
+            poster="/images/exclusive-hero.jpg"
+          >
+            <source src="/videos/exclusive-hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 to-slate-800/60" />
+        </div>
       {/* Hero Content */}
       <div className="relative z-10 text-center max-w-4xl mx-6">
         <motion.div

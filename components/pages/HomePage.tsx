@@ -55,7 +55,7 @@ export function HomePage() {
   return (
     <div className="pt-20">
       <HeroSection
-        backgroundImage="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop"
+        backgroundImage="/videos/export-hero.mp4"
         title={
           <>
             <motion.div

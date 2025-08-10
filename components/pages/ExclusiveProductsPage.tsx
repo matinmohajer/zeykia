@@ -73,21 +73,33 @@ export function ExclusiveProductsPage() {
   return (
     <div className="pt-20 pb-20">
       {/* Hero Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="glass-panel p-12 rounded-3xl"
+      <section className="relative h-[100svh] flex items-center justify-center overflow-hidden mb-6">
+        <div className="absolute inset-0 pointer-events-none">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            crossOrigin="anonymous"
+            poster="/images/exclusive-hero.jpg"
           >
-            <h1 className="text-slate-800 mb-6">Pre-Order Your Bespoke Masterpiece</h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              Commission an exclusive piece crafted specifically for your space. 
-              Each bespoke carpet is a unique creation, never to be replicated.
-            </p>
-          </motion.div>
+            <source src="/videos/exclusive-hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 to-slate-800/60" />
         </div>
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 glass-panel p-12 rounded-3xl max-w-3xl mx-6 text-center"
+        >
+          <h1 className="text-white mb-6">Pre-Order Your Bespoke Masterpiece</h1>
+          <p className="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+            Commission an exclusive piece crafted specifically for your space. Each bespoke carpet is a unique creation, never to be replicated.
+          </p>
+        </motion.div>
       </section>
 
       {/* Product Spotlight Grid */}

@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Truck, Globe, Users, Award, ArrowRight } from 'lucide-react';
-import { ImageWithFallback } from '../ImageWithFallback';
+
+import Image from 'next/image';
 
 export function ExportPage() {
   const milestones = [
@@ -39,20 +40,27 @@ export function ExportPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1920&h=1080&fit=crop"
-            alt="Woman artist painting professional design"
-            className="w-full h-full object-cover opacity-50"
-            fill
-          />
+        <div className="absolute inset-0 pointer-events-none">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            crossOrigin="anonymous"
+            poster="/images/export-hero.jpg"
+          >
+            <source src="/videos/export-hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70" />
         </div>
         
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 glass-panel p-12 rounded-3xl max-w-3xl mx-6 text-center"
+          className={"relative z-10 glass-panel p-12 rounded-3xl max-w-3xl mx-6 text-center"}
         >
           <h1 className="text-white mb-6">Global Export & Bespoke Collaborations</h1>
           <p className="text-white/80 text-xl leading-relaxed">
@@ -77,12 +85,14 @@ export function ExportPage() {
               }`}
             >
               <div className={`glass-card rounded-3xl p-2 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <ImageWithFallback
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-[400px] object-cover rounded-2xl"
-                  fill
-                />
+                <div className="relative h-[400px]">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover rounded-2xl"
+                  />
+                </div>
               </div>
               
               <div className={`glass-card rounded-3xl p-8 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
@@ -101,7 +111,7 @@ export function ExportPage() {
                 </div>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  // whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="glass-button px-8 py-4 rounded-full text-slate-700 tracking-wider"
                 >
