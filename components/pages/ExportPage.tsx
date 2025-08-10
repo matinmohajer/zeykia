@@ -60,6 +60,8 @@ export function ExportPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
+                            // @ts-ignore
+
           className={"relative z-10 glass-panel p-12 rounded-3xl max-w-3xl mx-6 text-center"}
         >
           <h1 className="text-white mb-6">Global Export & Bespoke Collaborations</h1>
@@ -80,6 +82,8 @@ export function ExportPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
+                                // @ts-ignore
+
               className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 ${
                 index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
               }`}
@@ -113,6 +117,8 @@ export function ExportPage() {
                 <motion.button
                   // whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                                    // @ts-ignore
+
                   className="glass-button px-8 py-4 rounded-full text-slate-700 tracking-wider"
                 >
                   LEARN MORE
@@ -131,6 +137,8 @@ export function ExportPage() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+                              // @ts-ignore
+
             className="text-center text-slate-800 mb-16"
           >
             Our Journey to Global Excellence
@@ -148,6 +156,8 @@ export function ExportPage() {
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                                    // @ts-ignore
+
                   className={`flex items-center ${
                     index % 2 === 0 ? 'justify-start' : 'justify-end'
                   }`}
